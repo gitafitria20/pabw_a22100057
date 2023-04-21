@@ -36,9 +36,9 @@ $mahasiswa = $rows;
   <table border="1" cellpadding="10" cellspacing="0">
     <tr>
       <th>#</th>
-      <th>Nama</th>
       <th>NPM</th>
-      <th>Kelas</th>
+      <th>Nama</th>
+      <th>Email</th>
       <th>Jurusan</th>
       <th>Aksi</th>
     </tr>
@@ -47,9 +47,9 @@ $mahasiswa = $rows;
     foreach ($mahasiswa as $m) :  ?>
       <tr>
         <td><?= $i++; ?></td>
-        <td><?= $m['nama']; ?></td>
         <td><?= $m['npm']; ?></td>
-        <td><?= $m['kelas']; ?></td>
+        <td><?= $m['nama']; ?></td>
+        <td><?= $m['email']; ?></td>
         <td><?= $m['jurusan']; ?></td>
         <td>
           <a href="">ubah</a> | <a href="">hapus</a>
