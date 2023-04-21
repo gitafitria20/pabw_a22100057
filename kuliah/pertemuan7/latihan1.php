@@ -37,7 +37,7 @@ $mahasiswa = $rows;
     <tr>
       <th>#</th>
       <th>Nama</th>
-      <th>NIM</th>
+      <th>NPM</th>
       <th>Kelas</th>
       <th>Jurusan</th>
       <th>Aksi</th>
@@ -48,7 +48,7 @@ $mahasiswa = $rows;
       <tr>
         <td><?= $i++; ?></td>
         <td><?= $m['nama']; ?></td>
-        <td><?= $m['nim']; ?></td>
+        <td><?= $m['npm']; ?></td>
         <td><?= $m['kelas']; ?></td>
         <td><?= $m['jurusan']; ?></td>
         <td>
