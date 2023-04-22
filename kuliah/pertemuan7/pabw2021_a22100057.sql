@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 21, 2023 at 03:29 PM
+-- Generation Time: Apr 22, 2023 at 04:38 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `pabw_a22100057`
+-- Database: `pabw2021_a22100057`
 --
 
 -- --------------------------------------------------------
@@ -28,21 +28,22 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `mahasiswa` (
-  `nama` varchar(11) NOT NULL,
-  `npm` varchar(10) NOT NULL,
-  `kelas` varchar(11) NOT NULL,
-  `jurusan` varchar(30) NOT NULL
+  `id` int(11) NOT NULL,
+  `nama` varchar(30) NOT NULL,
+  `nim` char(15) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `jurusan` varchar(30) NOT NULL,
+  `gambar` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Indexes for dumped tables
+-- Dumping data for table `mahasiswa`
 --
 
---
--- Indexes for table `mahasiswa`
---
-ALTER TABLE `mahasiswa`
-  ADD PRIMARY KEY (`npm`);
+INSERT INTO `mahasiswa` (`id`, `nama`, `nim`, `email`, `jurusan`, `gambar`) VALUES
+(1, 'Gita Fitria', '22100057', 'gtftr272@gmail.com', 'Teknik Informatika', 'ghita.jpg'),
+(2, 'Ghina Saputri', '221987', 'ghina33@gmail.com', 'Sistem Informasi', 'ghina.png'),
+(3, 'Ghisa Maharani', '332245', 'ghis4@gmail.com', 'Manajemen Informatika', 'ghisa.jpg');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

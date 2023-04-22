@@ -18,6 +18,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
   <table border="1" cellpadding="10" cellspacing="0">
     <tr>
       <th>#</th>
+      <th>Gambar</th>
       <th>NIM</th>
       <th>Nama</th>
       <th>Email</th>
@@ -29,6 +30,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
     foreach ($mahasiswa as $m) :  ?>
       <tr>
         <td><?= $i++; ?></td>
+        <td><img src="img/<?= $m['gambar']; ?>"></td>
         <td><?= $m['nim']; ?></td>
         <td><?= $m['nama']; ?></td>
         <td><?= $m['email']; ?></td>

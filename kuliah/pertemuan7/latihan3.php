@@ -15,10 +15,13 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 <body>
   <h3>Daftar Mahasiswa</h3>
 
+  <a href="tambah.php">Tambah Data Mahasiswa</a>
+  <br><br>
+
   <table border="1" cellpadding="10" cellspacing="0">
     <tr>
       <th>#</th>
-      <th>NIM</th>
+      <th>Gambar</th>
       <th>Nama</th>
       <th>Aksi</th>
     </tr>
@@ -27,10 +30,10 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
     foreach ($mahasiswa as $m) :  ?>
       <tr>
         <td><?= $i++; ?></td>
-        <td><?= $m['nim']; ?></td>
+        <td><img src="img/<?= $m['gambar']; ?>"></td>
         <td><?= $m['nama']; ?></td>
         <td>
-          <a href="">lihat detail</a>
+          <a href="detail.php?id=<?= $m['id']; ?>">Lihat Detail</a>
         </td>
       </tr>
     <?php endforeach;  ?>

@@ -1,6 +1,6 @@
 <?php
 //koneksi ke database dan pilih database
-$conn = mysqli_connect('localhost', 'root', '', 'pabw_a22100057');
+$conn = mysqli_connect('localhost', 'root', '', 'pabw2021_a22100057');
 
 //query isi tabel mahasiswa
 $result = mysqli_query($conn, "SELECT * FROM mahasiswa");
@@ -36,7 +36,8 @@ $mahasiswa = $rows;
   <table border="1" cellpadding="10" cellspacing="0">
     <tr>
       <th>#</th>
-      <th>NPM</th>
+      <th>Gambar</th>
+      <th>NIM</th>
       <th>Nama</th>
       <th>Email</th>
       <th>Jurusan</th>
@@ -47,7 +48,8 @@ $mahasiswa = $rows;
     foreach ($mahasiswa as $m) :  ?>
       <tr>
         <td><?= $i++; ?></td>
-        <td><?= $m['npm']; ?></td>
+        <td><img src="img/ghita.jpg"></td>
+        <td><?= $m['nim']; ?></td>
         <td><?= $m['nama']; ?></td>
         <td><?= $m['email']; ?></td>
         <td><?= $m['jurusan']; ?></td>
